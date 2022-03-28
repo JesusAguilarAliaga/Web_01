@@ -114,9 +114,9 @@ header li a:hover{
 }
 
 .container{
-    padding-bottom: 2rem;
+    margin: 5rem 0 0 0;
+    padding-bottom: 5rem;
     width: 100%;
-    height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -127,7 +127,7 @@ header li a:hover{
 .card{
     color: var(--ColorFondoNegro);
     border-radius: 8px;
-    padding-top: 1rem;
+    padding: 0.5rem;
     background-color: var(--ColorAcento);
     width: 20%;
     height: 300px;
@@ -135,10 +135,10 @@ header li a:hover{
 }
 
 .container2{
-    margin: 0;
-    padding-top:2rem;
+    margin: auto;
+    padding: 2rem 0 5rem 0;
     width: 100%;
-    height: 47rem;
+    gap: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -163,10 +163,9 @@ header li a:hover{
 }
 
 .container3{
-    margin: 0;
-    padding-top:0;
+    margin: auto;
+    padding: 0;
     width: 100%;
-    height: 27rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -212,10 +211,9 @@ header li a:hover{
 
 /*footer*/
 .container4{
-    margin: 0;
-    padding-top:0;
+    margin: auto;
+    padding: 2rem 0 3rem 0;
     width: 100%;
-    height: 22rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -234,11 +232,14 @@ header li a:hover{
     border-left: 5px solid var(--ColorBlanco);
     padding-top: 1rem;
     width: 45%;
-    height: 90%;
+    height: 12rem; /*cambiar height a 100% si añade el form* y eliminar la clase .card4_1>form>input*/
     text-align: center;
     padding: 0 1rem 0 2rem;
 }
 
+.card4_1>form>input{
+    margin-top: 4rem;
+}
 /*form style*/
 .feedback-input {
     color:var(--ColorBlanco);
@@ -288,7 +289,53 @@ textarea {
 
 
 /*responsive for mobile*/
-@media screen and (max-width:480px){
-    .container4{flex-direction: column;}
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .card{
+        width: 80%;
+    }
+
+    .container2{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .card2{
+        width: 80%;
+    }
+
+    .container3{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .card3{
+        width: 90%;
+    }
+    
+    .card3_1{
+        height: auto;
+        width: 90%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .container4{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .card4{
+        width: 80%;
+    }
+    
+    .card4_1{
+        border-left: none;
+        width: 80%;
+    }
 }
 
