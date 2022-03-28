@@ -1,13 +1,16 @@
 :root{
     --NotoSans: 'Noto Sans', sans-serif;
-    --ColorFondoGris: rgba(46, 46, 46, 0.829);
-    --ColorFondoNegro: rgb(31, 31, 31);
-    --ColorAcento: rgb(195, 167, 72);
+    --ColorFondoGris: rgba(46, 46, 46, 0.178);
+    --ColorFondoNegroGradient: linear-gradient(to right, #29323c, #485563);
+    --ColorFondoNegro: rgba(31, 31, 31);
+    --ColorAcento: rgb(207, 176, 73);
+    --ColorAcentoHover: rgb(187, 134, 19);
     --ColorBlanco: rgb(177, 177, 177);
 }
 
+
 body{
-    background-color: var(--ColorFondoNegro);
+    background: var(--ColorFondoNegroGradient);
     font-family: var(--NotoSans);
     color: var(--ColorBlanco);
     margin: 0;
@@ -22,21 +25,25 @@ body{
 
 /*Header*/
 .gridContainer {
-    margin-top:1rem;
+    margin-top:0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
     width: 100%;
-    height: 2rem;
+    height: 2.5rem;
 }
 
 .img_head{
-    margin-left: 0.5rem;
+    width: 2rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .list_head{
-    padding: 0 0 0 15rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .list_head li{
@@ -65,7 +72,16 @@ header li a:hover{
 }
 
 .list_icons_head{
-    margin-right: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list_icons>img{
+    display: inline;
+}
+
+.list_icons_head{
+    cursor: pointer;
 }
 
 /*section*/
@@ -97,7 +113,7 @@ header li a:hover{
     border-radius: 8px;
 }
 
-.Container{
+.container{
     padding-bottom: 2rem;
     width: 100%;
     height: 400px;
@@ -140,6 +156,8 @@ header li a:hover{
     text-align: center;
 }
 
+
+/*About*/
 .article4{
     background-color: var(--ColorFondoGris)
 }
@@ -162,31 +180,28 @@ header li a:hover{
     width: 25%;
     height: 350px;
     text-align: center;
-    color: rgb(206, 206, 206);
 }
 
-.card3 img{
+.card3>img{
     display: inline-block;
-    padding-top: 2rem;
-    height: 50px;
-    width: 50px;
+    height: 200px;
 }
 
 .card3 h2{
     font-size: 1.5rem;
-    margin: 5rem 0 0 0;
+    margin: 0 0 0 0;
 }
 
-.card3 ul{
+.card3>ul{
     margin: 0;
-    padding: 1rem 0 0 2rem;
+    padding: 1rem 0 0 0;
 }
-.card3 ul img{
+.card3 ul>img{
     margin: 0;
     padding: 0;
 }
 
-.card4{
+.card3_1{
     border-radius: 8px;
     padding-top: 1rem;
     width: 50%;
@@ -196,10 +211,84 @@ header li a:hover{
 }
 
 /*footer*/
+.container4{
+    margin: 0;
+    padding-top:0;
+    width: 100%;
+    height: 22rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card4{
+    padding-top: 1rem;
+    width: 45%;
+    height: 80%;
+    text-align: center;
+}
+
+.card4_1{
+    border-left: 5px solid var(--ColorBlanco);
+    padding-top: 1rem;
+    width: 45%;
+    height: 90%;
+    text-align: center;
+    padding: 0 1rem 0 2rem;
+}
+
+/*form style*/
+.feedback-input {
+    color:var(--ColorBlanco);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: transparent;
+    border:2px solid var(--ColorAcento);
+    transition: all 0.3s;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
+.feedback-input:focus { border:2px solid var(--ColorAcentoHover); }
+
+textarea {
+    font-family: var(--NotoSans);
+    height: 6rem;
+    line-height: 100%;
+    resize: none;
+}
+
+[type="submit"] {
+    width: 100%;
+    background: var(--ColorAcento);
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color: var(--ColorFondoNegro);
+    font-size: 1.5rem;
+    padding: 0.5rem 0 0.5rem 0;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+[type="submit"]:hover { background: var(--ColorAcentoHover); }
+
 
 .Copyright{
+    width: 100%;
     background-color: var(--ColorFondoGris);
     padding-left: 3rem;
 }
 
+
+
+/*responsive for mobile*/
+@media screen and (max-width:480px){
+    .container4{flex-direction: column;}
+}
 
