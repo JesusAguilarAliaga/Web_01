@@ -3,9 +3,15 @@
     --ColorFondoGris: rgba(46, 46, 46, 0.178);
     --ColorFondoNegroGradient: linear-gradient(to right, #29323c, #485563);
     --ColorFondoNegro: rgba(31, 31, 31);
-    --ColorAcento: rgb(207, 176, 73);
-    --ColorAcentoHover: rgb(187, 134, 19);
+    --ColorAcento: /* rgb(207, 176, 73) */ rgb(255, 211, 105);
+    --ColorAcentoHover: rgb(255, 179, 0);
     --ColorBlanco: rgb(177, 177, 177);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -14,6 +20,17 @@ body{
     font-family: var(--NotoSans);
     color: var(--ColorBlanco);
     margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: var(--ColorBlanco);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--ColorAcento);
+    border-radius: 5px;
 }
 
 .h2Sub{
@@ -101,7 +118,7 @@ header li a:hover{
 
 .description{
     margin: auto;
-    width: 500px;
+    max-width: 500px;
     height: 100px;
     text-align: center;
 
@@ -114,9 +131,9 @@ header li a:hover{
 }
 
 .container{
-    margin: 5rem 0 0 0;
+    margin: 5rem auto 0 auto;
     padding-bottom: 5rem;
-    width: 100%;
+    width: 92%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -127,7 +144,7 @@ header li a:hover{
 .card{
     color: var(--ColorFondoNegro);
     border-radius: 8px;
-    padding: 0.5rem;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
     background-color: var(--ColorAcento);
     width: 20%;
     height: 300px;
@@ -137,7 +154,7 @@ header li a:hover{
 .container2{
     margin: auto;
     padding: 2rem 0 5rem 0;
-    width: 100%;
+    width: 90%;
     gap: 5rem;
     display: flex;
     flex-direction: row;
@@ -149,7 +166,7 @@ header li a:hover{
 .card2{
     color: var(--ColorFondoNegro);
     border-radius: 8px;
-    padding-top: 1rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
     background-color: var(--ColorAcento);
     width: 40%;
     height: 300px;
@@ -284,12 +301,13 @@ textarea {
     width: 100%;
     background-color: var(--ColorFondoGris);
     padding-left: 3rem;
+    margin-bottom: 1rem;
 }
 
 
 
 /*responsive for mobile*/
-@media screen and (max-width:768px){
+@media screen and (max-width:900px){
     .container{
         flex-direction: column;
         gap: 3rem;
@@ -339,3 +357,83 @@ textarea {
     }
 }
 
+/*other mediascreen*/
+@media screen and (max-width:450px){
+    .h2Sub{
+        padding-top: 2rem;
+    }
+
+    .gridContainer{
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .list_head{
+        margin: auto;
+        padding: 0;
+    }
+
+    .list_icons_head{
+        padding: 0;
+        height: auto;
+    }
+
+    .name{
+        width: auto;
+        height: auto;
+        font-size: 3.5rem;
+        margin-top: 6rem;
+    }
+
+    .subName{
+        width: auto;
+        height: auto;
+        font-size: 1.5rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+
+    .description{
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 0 0.3rem 0 0.3rem;
+    }
+
+    .card3_1{
+        text-align: center;
+    }
+
+    .container{
+        margin-top: 1rem;
+        gap: 1rem;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .container2{
+        margin-top: 1rem;
+        gap: 1rem;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .card3{
+        height: auto;
+    }
+
+    .card3>img{
+        height: 150px;
+    }
+    
+    .container4{
+        margin-top: 1rem;
+        gap: 1rem;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .card4_1{
+        margin: 0 0 2rem 0;
+        height: auto;
+    }
+
+}
